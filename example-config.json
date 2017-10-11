@@ -20,7 +20,8 @@
       "url": "https://openshift-master-1.net:8443",
       "username": "abc",
       "password": "xyz",
-      "sshuser": "ssh-user"
+      "sshuser": "ssh-user",
+      "status": "active"
     },
     {
       "name": "server2",
@@ -51,7 +52,8 @@
       "url": "https://openshift-master-2.net:8443",
       "username": "abc",
       "password": "xyz",
-      "sshuser": "ssh-userr"
+      "sshuser": "ssh-user",
+      "status": "shutdown"
     },
     {
       "name": "server3",
@@ -59,7 +61,8 @@
       "url": "https://openshift-master-3.net:8443",
       "username": "abc",
       "password": "xyz",
-      "sshuser": "ssh-user"
+      "sshuser": "ssh-user",
+      "status": "shutdown"
     }
   ]
 }
