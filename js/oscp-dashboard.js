@@ -579,7 +579,7 @@ function updateCharts(id,project) {
       }
     } else {
       for (let x = 0; x < nodes; x++) {
-        exec('oc rsh ' + timerList[x].substr(0,timerList[x].lastIndexOf('-')) + ' /usr/bin/top -b -n 5 -d.2 | grep \'node\\|java\\|mysql\\|mongo\\|redis\\|memcache\\|nagios\\|bash\' | awk \'{print \"' + timerList[x].substr(0,timerList.lastIndexOf('-')) + ':\"$9":"$10}\'', (error, stdout, stderr) => {
+        exec('oc rsh -n ' + project + ' ' + timerList[x].substr(0,timerList[x].lastIndexOf('-')) + ' /usr/bin/top -b -n 5 -d.2 | grep \'node\\|java\\|mysql\\|mongo\\|redis\\|memcache\\|nagios\\|bash\' | awk \'{print \"' + timerList[x].substr(0,timerList.lastIndexOf('-')) + ':\"$9":"$10}\'', (error, stdout, stderr) => {
           if (error) {
             log.error(`exec error: ${error}`);
             return;
